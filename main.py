@@ -10,7 +10,8 @@ agent = Agent(
     tools=[YFinanceTools(stock_price=True, analyst_recommendations=True, stock_fundamentals=True)],
     show_tool_calls=True,
     markdown=True,
-    instructions=["use tables to display data, and dont truncate the data"]
+    instructions=["use tables to display data, and dont truncate the data"],
+    debug_mode=True
 )
 
 agent.print_response("Summarize and compare analyst recommendations and fundamentals for GRMN and TSLA")
